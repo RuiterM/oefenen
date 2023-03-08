@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <img style="width: 1920px" height="300px" src="{{ asset ("img/foto.jpg") }}">
+    {% for klas in klassen %}
+        <div class="container">
+            <table class="table">
+                    <tr>
+                        <th>{{ klas.name }}</th>
+                        <th><a href="{{ path("leerlingen") }}">leerlingen</a></th>
+                    </tr>
+            </table>
+        </div>
+    {% endfor %}
+{% endblock %}

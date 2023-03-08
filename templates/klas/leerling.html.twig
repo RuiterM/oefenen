@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <img style="width: 1920px" height="300px" src="{{ asset ("img/foto.jpg") }}">
+    {% for leerling in leerlingen %}
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <h4>
+                    
+                </h4>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>{{ leerling.snummer }}</th>
+                    <th>{{ leerling.name }}</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    {% endfor %}
+{% endblock %}
